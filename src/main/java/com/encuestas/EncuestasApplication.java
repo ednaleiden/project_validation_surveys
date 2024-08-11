@@ -8,7 +8,7 @@ public class EncuestasApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EncuestasApplication.class, args);
-		int process=1;
+
 	}
 
 }
