@@ -3,7 +3,6 @@ package com.encuestas.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -13,11 +12,11 @@ import lombok.NoArgsConstructor;
 public class Voto {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="VOTO_ID")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="OPCION_ID")
-    private Opcion option;
+    @JoinColumn(name="OPCION_ID", nullable = false)
+    private Opcion opcion;
 }
